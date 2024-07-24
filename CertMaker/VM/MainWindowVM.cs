@@ -408,9 +408,9 @@ namespace CertMaker.VM
         {
             return executeOpenSSL(new List<string>()
             {
-                "genrsa",
-                "-aes256",
-                "-passout", $"pass:{PrivateKeyPassword.Value}",
+                "genpkey",
+                "-algorithm", "RSA",
+                "-pkeyopt", "rsa_keygen_bits:4096",
                 "-out", targetPrivateKeyFile,
             });
         }
