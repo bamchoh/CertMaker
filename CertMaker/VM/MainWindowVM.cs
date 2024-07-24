@@ -355,7 +355,7 @@ namespace CertMaker.VM
 
             PemToDer(newTargetCertificateFile, "user-server.der");
 
-            copyCerts(targetCertificateFile, newTargetCertificateFile);
+            copyCerts(targetPrivateKeyFile, newTargetCertificateFile);
 
             /*
             (ret, stdout, stderr) = CreatePfx(targetPrivateKeyFile, newTargetCertificateFile, "server.pfx");
